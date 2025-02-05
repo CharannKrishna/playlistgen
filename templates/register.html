@@ -1,0 +1,106 @@
+﻿<!-- templates/register.html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-6">Register</h1>
+        {% if error %}
+            <p class="text-red-500 mb-4">{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Username</label>
+                <input type="text" name="username" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Password</label>
+                <input type="password" name="password" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Confirm Password</label>
+                <input type="password" name="confirm_password" class="w-full p-2 border rounded" required>
+            </div>
+            <button type="submit" onclick="window.location.href='index.html'" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Register
+            </button>
+        </form>
+        <div class="mt-4 text-center">
+            <a href="/login" class="text-blue-500">Already have an account? Login</a>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        function togglePassword(id) {
+            var input = document.getElementById(id);
+            var icon = document.getElementById(id + "-icon");
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-6">Register</h1>
+        {% if error %}
+            <p class="text-red-500 mb-4">{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Username</label>
+                <input type="text" name="username" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4 relative">
+                <label class="block text-gray-700 mb-2">Password</label>
+                <div class="relative">
+                    <input type="password" id="password" name="password" class="w-full p-2 border rounded pr-10" required>
+                    <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" onclick="togglePassword('password')">
+                        <i id="password-icon" class="fa fa-eye text-black"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="mb-4 relative">
+                <label class="block text-gray-700 mb-2">Confirm Password</label>
+                <div class="relative">
+                    <input type="password" id="confirm_password" name="confirm_password" class="w-full p-2 border rounded pr-10" required>
+                    <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" onclick="togglePassword('confirm_password')">
+                        <i id="confirm_password-icon" class="fa fa-eye text-black"></i>
+                    </span>
+                </div>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Register
+            </button>
+        </form>
+        <div class="mt-4 text-center">
+            <a href="/login" class="text-blue-500">Already have an account? Login</a>
+        </div>
+    </div>
+</body>
+</html>

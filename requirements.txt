@@ -1,0 +1,11 @@
+﻿Flask
+Authlib
+bcrypt
+requests
+base64
+os
+uuid
+json
+sqlite3
+datetime
+random
