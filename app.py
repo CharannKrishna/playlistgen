@@ -299,4 +299,5 @@ def delete_playlist_route(playlist_id):
     return jsonify({'error': 'Playlist not found'}), 404
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=80,debug=True)
+    app.run(debug=True)
+    # app.run(host="0.0.0.0", port=80,debug=True)

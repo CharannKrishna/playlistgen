@@ -38,3 +38,37 @@ a {
 .fa-eye, .fa-eye-slash {
     color: black !important;
 }
+.profile-menu {
+    /* existing styles */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#playlists-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.playlist-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.playlist-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-content {
+    display: none;
+}
+#playlists-list {
+    transition: all 0.3s ease;
+}
+
+.playlist-content {
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 4px 0;
+    padding-left: 8px;
+}
